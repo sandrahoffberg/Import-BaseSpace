@@ -16,6 +16,12 @@ This capsule requires an access token, which can only be obtained by navigating 
 
 **Step 4**: Create a data asset from the output of this capsule to analyze your data. 
 
+## Input
+App Panel Parameters
+
+## Output
+The Illumina run or demultiplexed fastq files
+
 ## App Panel Parameters
 
 - Project or Run ID, found in basespace.illumina.com URL for that project or run. Note that these IDs are different.
