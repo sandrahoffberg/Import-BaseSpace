@@ -1,0 +1,10 @@
+metadata_version: 1
+name: Download data from BaseSpace
+description: Download Illumina sequencing run from Illumina BaseSpace CLI
+tags:
+- Illumina
+- BaseSpace
+- Data Connectors
+- fastq
+authors:
+- name: Sandra Hoffberg
