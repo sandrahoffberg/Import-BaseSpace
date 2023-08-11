@@ -24,13 +24,14 @@ The Illumina run or demultiplexed fastq files
 
 ## App Panel Parameters
 
-- Project or Run ID, found in basespace.illumina.com URL for that project or run. Note that these IDs are different.
+Project or Run ID
+- Found in basespace.illumina.com URL for that project or run. Note that these IDs are different.
 
-- Download the entire RUN or demultiplexed files (PROJECT)?
+Download the entire RUN or demultiplexed files
+- Determine whether you want all associated data or just the fastqs or bcls [defult: project]
 
+If downloading files, bcl or fastq's?
 - What file format to download, bcl or fastq's
-
-
 
 <hr>
 
