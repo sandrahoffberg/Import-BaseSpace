@@ -1,0 +1,53 @@
+Usage:
+  bs [OPTIONS] download project [project-OPTIONS]
+
+File-related commands.
+
+
+Application Options:
+  -V, --version                           Display version
+
+Logging Options:
+  -v, --verbose                           Increase verbosity (additive)
+  -q, --quiet                             Only print errors (overrides verbosity)
+      --log=                              Path to standard logging destination (if given, captures both STDOUT and STDERR with timestamps)
+
+Output Options:
+      --stdout=                           Standard Output destination, "path/to/file" or "-" for system's <STDOUT> (default: -)
+      --stderr=                           Standard Error destination, "path/to/file" or "-" for system's <STDERR> (default: -)
+
+BaseSpace Connection Options:
+  -c, --config=                           Use this BaseSpaceCLI configuration
+      --api-server=                       BaseSpace API hostname [$BASESPACE_API_SERVER]
+      --access-token=                     Manual BaseSpace API access token [$BASESPACE_ACCESS_TOKEN]
+      --retry                             retry failed calls 5 times (with backoff)
+
+Help Options:
+  -h, --help                              Show this help message
+
+[project command options]
+      -z, --compress                      Write gzipped tar archive
+          --no-metadata                   Do not write JSON metadata about this download
+          --no-progress-bars              Do not show progress bars for downloads
+          --summary                       Show a single summary progress bar
+
+    Entity Options:
+      -n, --name=                         Name of entity
+      -i, --id=                           ID of entity
+
+    Filesystem Options:
+          --extension=                    List of file extensions to filter by
+          --overwrite                     overwrite files that already exist and have the same file size
+      -o, --output=                       output directory (defaults to current working directory) or filename for compressed output (defaults to archive.tar.gz) (default: .)
+
+    File Filtering:
+          --include=                      Patterns to include files in the transfer in order (can be supplied more than once). By default all files are included so must be used with
+                                          --exclude to have an effect, for example: --exclude '*' --include '*.csv' would include only files with a .csv extension in the transfer.
+          --exclude=                      Patterns to exclude files from the transfer in order (can be supplied more than once). Ordering of --include and --exclude flags is
+                                          important, for example --include 'NA12878*' --exclude '*' will exclude everything because the exclusion is applied last, whereas reversing
+                                          the order of these flags selectively includes only files starting with NA12878.
+
+    Concurrency Options:
+          --concurrency=[low|medium|high] Set upload concurrency level. Higher levels of concurrency may be faster but may also saturate internet bandwidth (default: medium)
+          --concurrent-files=             Maximum number of files to process concurrently, use together with concurrent-parts to override --concurrency
+          --concurrent-parts=             Maximum number of parts per file to process concurrently, use together with concurrent-files to override --concurrency
