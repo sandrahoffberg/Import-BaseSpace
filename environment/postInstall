@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -e
+ 
+# make a directory to store the bs program
+mkdir -p $HOME/bin
+ 
+# download the BaseSpace CLI
+wget "https://launch.basespace.illumina.com/CLI/latest/amd64-linux/bs" -O $HOME/bin/bs
+ 
+# make the downloaded binary executable
+chmod u+x $HOME/bin/bs
+ 
+# create symlink
+ln -s $HOME/bin/bs /usr/local/bin
