@@ -4,13 +4,13 @@
 
 # Download data or whole Illumina runs from BaseSpace <br>
 
-The purpose of this capsule is to download a project or fastq reads directly from [BaseSpace](space.illumina.com/dashboard), without having to transfer to AWS, box, or a local machine before transfering again to Code Ocean. 
+The purpose of this capsule is to download a project or fastq reads directly from [BaseSpace](https://login.illumina.com/platform-services-manager/?rURL=https://basespace.illumina.com&clientId=basespace&clientVars=aHR0cHM6Ly9iYXNlc3BhY2UuaWxsdW1pbmEuY29tL2Rhc2hib2FyZA&redirectMethod=GET#/), without having to transfer to AWS, Dropbox or similar application, or a local machine before transfering again to Code Ocean. 
 
 **Step 1**: Fill out the app panel to indicate what you want to download
 
 **Step 2**: Run the capsule.
 
-**Step 3**: Click on the link in the output file to authenticate the software.  This capsule requires an access token, which can only be obtained by navigating to URL after authenticating software.  You will be brought to a page to sign in to the Illumina website and you must sign into BaseSpace using your own credentials.
+**Step 3**: Click on the link in the output file to authenticate the software.  You will be brought to a page to sign in to the Illumina website and you must sign into BaseSpace using your own credentials.
 
 ![BaseSpace_sign_in](images/BaseSpace_sign_in.png)
 
@@ -44,7 +44,7 @@ Project or Run ID
 
 
 Download the entire RUN or demultiplexed files (PROJECT)
-- Determine whether you want all associated data (the Run folder) or just the demultiplexed fastq.gz files (project) [defult: project]
+- Determine whether you want all associated data (the Run folder) or just the demultiplexed fastq.gz files (project) [Default: project]
 
 
 ## Documentation
