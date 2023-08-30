@@ -1,4 +1,4 @@
-# hash:sha256:57db99997328b3929f312721cd3a17e180aa070dc0ce22076b0cd747da868dc7
+# hash:sha256:3055852e73daf80853195adba9d007cbfbe4e3ee4927019eb0f9cb09224c0d3e
 FROM registry.apps.codeocean.com/codeocean/mambaforge3:22.11.1-4-ubuntu22.04
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -9,7 +9,9 @@ COPY git-askpass /
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
+        ca-certificates \
         curl=7.81.0-1ubuntu1.13 \
+        git \
         wget=1.21.2-2ubuntu1 \
     && rm -rf /var/lib/apt/lists/*
 
