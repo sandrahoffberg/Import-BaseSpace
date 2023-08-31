@@ -6,7 +6,11 @@
 
 The purpose of this capsule is to download a project or fastq reads directly from [BaseSpace](https://login.illumina.com/platform-services-manager/?rURL=https://basespace.illumina.com&clientId=basespace&clientVars=aHR0cHM6Ly9iYXNlc3BhY2UuaWxsdW1pbmEuY29tL2Rhc2hib2FyZA&redirectMethod=GET#/), without having to transfer to AWS, Dropbox or similar application, or a local machine before transfering again to Code Ocean. 
 
-**Step 1**: Fill out the app panel to indicate what you want to download
+**Step 1**: Fill out the app panel to indicate what you want to download. You should be able to find the Run ID or Project ID by browsing to the appropriate run or project and then looking at the URL. For example, 
+
+https://basespace.illumina.com/run/236482248/details has a Run ID of 236482248
+
+https://basespace.illumina.com/projects/159738596/about has an Project ID of 159738596
 
 **Step 2**: Run the capsule.
 
@@ -17,13 +21,6 @@ The purpose of this capsule is to download a project or fastq reads directly fro
 Then you must accept the following permissions:
 
 ![bs_authentication](images/bs_authentication.png)
- 
-
-You can also attach your Illumina credentials to this capsule as a secret. To do this, 
-1. Click on environment to display the environment editor in a capsule.
-2. Scroll down to see the Secrets section.
-3. Click on Attach secret to capsule, and a drop-down menu that contains the secret list from your account settings page will appear.
-4. Select the secret you want to attach.
 
 You will only be able to download runs that you own or that are shared with you. If not clicked, the link to authenticate the software will expire after 2 minutes, and the capsule run will fail. 
 
@@ -39,7 +36,7 @@ The Illumina run or demultiplexed fastq files
 ## App Panel Parameters
 
 Project or Run ID
-- Found in basespace.illumina.com URL for that project or run. Note that these IDs are different.
+- Found in basespace.illumina.com URL for that project or run. **Note that these IDs are different.**
 - You will only be able to download runs that you own or are shared with you. 
 
 
